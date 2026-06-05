@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harshit Kumar Singh | AI Automation Engineer | Python · RPA · Playwright</title>
+<meta name="description" content="Harshit Kumar Singh — AI Automation Engineer with 3+ years eliminating 12+ FTE through Python automation, RPA, Playwright, Salesforce integrations, and intelligent workflow systems. Open to Automation, Python, and AI Engineer roles.">
+<meta name="keywords" content="Harshit Kumar Singh, AI Automation Engineer, Python Developer, RPA Developer, Playwright, Selenium, Automation Anywhere, Salesforce Integration, Flask Developer, Noida India">
+<meta property="og:title" content="Harshit Kumar Singh | AI Automation Engineer">
+<meta property="og:description" content="Building intelligent automation systems that eliminate manual effort and scale enterprise operations.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg:        #0e0f11;
+    --bg2:       #141518;
+    --bg3:       #1a1c20;
+    --border:    rgba(255,255,255,0.07);
+    --amber:     #f0a500;
+    --amber-dim: #c47f00;
+    --amber-glow:rgba(240,165,0,0.15);
+    --text:      #e8e6e0;
+    --muted:     #7a7870;
+    --faint:     #3a3835;
+    --white:     #ffffff;
+    --green:     #3ecf70;
+    --red:       #e05252;
+    --mono:      'JetBrains Mono', monospace;
+    --serif:     'DM Serif Display', serif;
+    --sans:      'DM Sans', sans-serif;
+    --radius:    6px;
+    --max:       1160px;
+    --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--amber-dim); border-radius: 3px; }
+
+  /* ── CANVAS BACKGROUND ── */
+  #circuit-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 2rem;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(14,15,17,0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition);
+  }
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--muted); }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color var(--transition);
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0;
+    width: 0; height: 1px;
+    background: var(--amber);
+    transition: width var(--transition);
+  }
+  .nav-links a:hover { color: var(--amber); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bg) !important;
+    background: var(--amber);
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition);
+  }
+  .nav-cta:hover { background: #ffc02e !important; transform: translateY(-1px); }
+  .nav-cta::after { display: none !important; }
+
+  /* ── SECTIONS ── */
+  section { position: relative; z-index: 1; }
+  .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 28px; height: 1px;
+    background: var(--amber);
+  }
+  h2.section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .section-sub {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 3rem;
+    max-width: 540px;
+  }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 2rem 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--amber-glow);
+    border: 1px solid rgba(240,165,0,0.3);
+    border-radius: 100px;
+    padding: 0.35rem 0.9rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    margin-bottom: 1.8rem;
+    animation: fadeSlideUp 0.6s ease both;
+  }
+  .status-dot {
+    width: 7px; height: 7px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 2s ease infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.3); }
+  }
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 4.8rem);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    animation: fadeSlideUp 0.7s ease 0.1s both;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--amber);
+  }
+  .hero-typewriter {
+    font-family: var(--mono);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 1.8rem;
+    min-height: 2em;
+    animation: fadeSlideUp 0.7s ease 0.2s both;
+  }
+  .hero-typewriter .cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--amber);
+    vertical-align: middle;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: var(--muted);
+    line-height: 1.8;
+    max-width: 540px;
+    margin-bottom: 2.5rem;
+    animation: fadeSlideUp 0.7s ease 0.3s both;
+  }
+  .hero-desc strong { color: var(--text); }
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    animation: fadeSlideUp 0.7s ease 0.4s both;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--amber);
+    color: var(--bg);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.8rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    border: none; cursor: pointer;
+  }
+  .btn-primary:hover {
+    background: #ffc02e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(240,165,0,0.28);
+  }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.8rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid var(--faint);
+    transition: border-color var(--transition), color var(--transition), transform var(--transition);
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+    transform: translateY(-2px);
+  }
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    animation: fadeSlideUp 0.7s ease 0.5s both;
+  }
+  .hero-stat-num {
+    font-family: var(--mono);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .hero-stat-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: var(--mono);
+    letter-spacing: 0.04em;
+  }
+
+  /* Hero terminal card */
+  .hero-terminal {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    animation: fadeSlideUp 0.8s ease 0.4s both;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+  }
+  .terminal-bar {
+    background: var(--bg3);
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .t-dot {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+  }
+  .t-dot.r { background: #e05252; }
+  .t-dot.y { background: #f0a500; }
+  .t-dot.g { background: #3ecf70; }
+  .terminal-title {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-left: 0.5rem;
+    letter-spacing: 0.06em;
+  }
+  .terminal-body {
+    padding: 1.4rem 1.6rem;
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    line-height: 2;
+    color: var(--text);
+  }
+  .t-line { display: flex; gap: 0.5rem; }
+  .t-prompt { color: var(--amber); }
+  .t-key { color: #8b9cf0; }
+  .t-val { color: var(--green); }
+  .t-comment { color: var(--muted); }
+  .t-blank { height: 0.5rem; }
+  .t-section { color: var(--amber); font-weight: 700; margin-top: 0.3rem; }
+  .t-impact { color: #e2c97e; }
+
+  /* ── ABOUT ── */
+  #about {
+    padding: 100px 0;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .about-text p {
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+  .about-text p strong { color: var(--text); }
+  .about-text p em { color: var(--amber); font-style: normal; }
+  .pitch-box {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--amber);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    margin-top: 2rem;
+  }
+  .pitch-label {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.6rem;
+  }
+  .pitch-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    font-style: italic;
+    line-height: 1.7;
+  }
+  .about-details { display: flex; flex-direction: column; gap: 1.8rem; }
+  .detail-card {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    transition: border-color var(--transition);
+  }
+  .detail-card:hover { border-color: rgba(240,165,0,0.3); }
+  .detail-card-label {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.5rem;
+  }
+  .detail-card-val {
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .detail-card-val a {
+    color: var(--amber);
+    text-decoration: none;
+  }
+  .brand-statement {
+    background: linear-gradient(135deg, rgba(240,165,0,0.08), rgba(240,165,0,0.02));
+    border: 1px solid rgba(240,165,0,0.2);
+    border-radius: 10px;
+    padding: 1.8rem;
+    margin-top: 0.5rem;
+  }
+  .brand-statement-label {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .brand-statement p {
+    font-size: 1.05rem;
+    color: var(--white);
+    line-height: 1.65;
+    font-family: var(--serif);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── SKILLS ── */
+  #skills { padding: 100px 0; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .skill-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.6rem;
+    transition: border-color var(--transition), transform var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--amber);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+  }
+  .skill-card:hover { border-color: rgba(240,165,0,0.25); transform: translateY(-3px); }
+  .skill-card:hover::before { transform: scaleX(1); }
+  .skill-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+  }
+  .skill-cat {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.6rem;
+  }
+  .skill-items {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .skill-tag {
+    display: inline-block;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.25rem 0.65rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--text);
+    transition: background var(--transition), border-color var(--transition), color var(--transition);
+    cursor: default;
+  }
+  .skill-tag:hover {
+    background: var(--amber-glow);
+    border-color: rgba(240,165,0,0.4);
+    color: var(--amber);
+  }
+  .skill-tag.highlight {
+    background: var(--amber-glow);
+    border-color: rgba(240,165,0,0.3);
+    color: var(--amber);
+  }
+
+  /* Competency bars */
+  .competencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-top: 1rem;
+  }
+  .comp-item { margin-bottom: 1.4rem; }
+  .comp-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  .comp-name {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.04em;
+  }
+  .comp-pct {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--amber);
+  }
+  .comp-bar {
+    height: 4px;
+    background: var(--bg3);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .comp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--amber-dim), var(--amber));
+    border-radius: 2px;
+    transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    width: 0;
+  }
+  .comp-fill.animated { width: var(--target-width); }
+
+  /* ── EXPERIENCE ── */
+  #experience {
+    padding: 100px 0;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .exp-company-group {}
+  .exp-company {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+  .exp-role {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+  }
+  .exp-period {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+  .exp-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+  .exp-location {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .exp-badge {
+    display: inline-block;
+    background: var(--amber-glow);
+    border: 1px solid rgba(240,165,0,0.3);
+    border-radius: 4px;
+    padding: 0.2rem 0.7rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+  .exp-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  .exp-pillar {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.3rem 1.4rem;
+  }
+  .pillar-title {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .exp-bullets {
+    list-style: none;
+  }
+  .exp-bullets li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .exp-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+    font-size: 0.8rem;
+  }
+  .exp-bullets li strong { color: var(--text); }
+  .impact-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    background: linear-gradient(135deg, rgba(240,165,0,0.06), rgba(240,165,0,0.01));
+    border: 1px solid rgba(240,165,0,0.15);
+    border-radius: 10px;
+    padding: 1.8rem;
+  }
+  .impact-stat {}
+  .impact-num {
+    font-family: var(--mono);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .impact-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  /* ── PROJECTS ── */
+  #projects { padding: 100px 0; }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+  }
+  .project-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover {
+    border-color: rgba(240,165,0,0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .project-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 0;
+  }
+  .project-header {
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+    padding: 1.4rem 1.8rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .project-number {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+  }
+  .project-type-tag {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--amber);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .project-body { padding: 1.8rem; flex: 1; }
+  .project-title {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+  }
+  .project-subtitle {
+    font-family: var(--mono);
+    font-size: 0.73rem;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+  }
+  .project-problem {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .project-highlights { list-style: none; margin-bottom: 1.4rem; }
+  .project-highlights li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .project-highlights li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+    font-size: 0.75rem;
+  }
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border);
+  }
+  .tech-chip {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.2rem 0.55rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .project-case-study {
+    background: var(--bg3);
+    border-left: 1px solid var(--border);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .cs-section-title {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.5rem;
+  }
+  .cs-text {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .cs-metrics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+  .cs-metric {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.9rem;
+    text-align: center;
+  }
+  .cs-metric-val {
+    font-family: var(--mono);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 0.2rem;
+  }
+  .cs-metric-lbl {
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.3;
+  }
+
+
+
+  /* ── EDUCATION & CERTS ── */
+  #education { padding: 100px 0; }
+  .edu-certs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  .edu-card, .cert-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: border-color var(--transition);
+  }
+  .edu-card:hover, .cert-card:hover { border-color: rgba(240,165,0,0.2); }
+  .edu-degree {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--white);
+    margin-bottom: 0.3rem;
+  }
+  .edu-university {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 0.2rem;
+  }
+  .edu-year {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+  }
+  .cert-list { list-style: none; }
+  .cert-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .cert-list li:last-child { border-bottom: none; }
+  .cert-icon {
+    font-size: 1.1rem;
+    margin-top: 0.1rem;
+  }
+  .cert-name {
+    font-size: 0.9rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .cert-org {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+
+
+
+  /* ── CONTACT ── */
+  #contact { padding: 100px 0 120px; }
+  .contact-inner {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .contact-inner .section-label { justify-content: center; }
+  .contact-inner .section-label::before { display: none; }
+  .contact-headline {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .contact-sub {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1.5rem;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: border-color var(--transition), color var(--transition), transform var(--transition);
+  }
+  .contact-link:hover {
+    border-color: var(--amber);
+    color: var(--amber);
+    transform: translateY(-2px);
+  }
+  .contact-link svg { width: 18px; height: 18px; }
+  .download-section {
+    background: linear-gradient(135deg, rgba(240,165,0,0.08), rgba(240,165,0,0.02));
+    border: 1px solid rgba(240,165,0,0.2);
+    border-radius: 12px;
+    padding: 2rem;
+  }
+  .download-title {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 0.5rem;
+  }
+  .download-sub {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    padding: 1.8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-copy {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer-links a {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color var(--transition);
+  }
+  .footer-links a:hover { color: var(--amber); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── DIVIDER ── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+  }
+
+  /* ── MOBILE NAV TOGGLE ── */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    cursor: pointer;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.1rem;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-terminal { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .competencies { grid-template-columns: 1fr; }
+    .exp-pillars { grid-template-columns: 1fr; }
+    .impact-row { grid-template-columns: 1fr 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-template-columns: 1fr; }
+    .project-case-study { border-left: none; border-top: 1px solid var(--border); }
+    .edu-certs-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+  }
+  @media (max-width: 600px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    .impact-row { grid-template-columns: 1fr 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    nav { padding: 0 1rem; }
+    .container { padding: 0 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="circuit-canvas"></canvas>
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">HKS<span>.dev</span></a>
+  <button class="nav-toggle" onclick="toggleMobileNav()" id="nav-btn">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <span class="status-dot"></span>
+        Open to Opportunities · Noida, India
+      </div>
+      <h1 class="hero-name">Harshit<br><em>Kumar Singh</em></h1>
+      <div class="hero-typewriter">
+        <span id="typewriter-text"></span><span class="cursor"></span>
+      </div>
+      <p class="hero-desc">
+        <strong>3+ years engineering automation systems</strong> that turn hours of manual work into seconds of machine execution. I build Python-based pipelines, RPA workflows, and enterprise integrations that have collectively <em>eliminated 12+ FTEs of manual effort</em> and connected mission-critical business platforms.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          View My Work
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get In Touch
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">3+</div>
+          <div class="hero-stat-label">Years Building<br>Automation</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">12+</div>
+          <div class="hero-stat-label">FTE Eliminated<br>via Automation</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">10+</div>
+          <div class="hero-stat-label">Systems &<br>Integrations Built</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terminal Card -->
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot r"></span>
+        <span class="t-dot y"></span>
+        <span class="t-dot g"></span>
+        <span class="terminal-title">harshit@automation ~ profile.py</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-comment"># Automation Engineer Profile</span></div>
+        <div class="t-blank"></div>
+        <div class="t-line"><span class="t-key">name</span><span style="color:var(--muted)"> = </span><span class="t-val">"Harshit Kumar Singh"</span></div>
+        <div class="t-line"><span class="t-key">role</span><span style="color:var(--muted)"> = </span><span class="t-val">"AI Automation Engineer"</span></div>
+        <div class="t-line"><span class="t-key">experience</span><span style="color:var(--muted)"> = </span><span class="t-val">"3+ years"</span></div>
+        <div class="t-line"><span class="t-key">location</span><span style="color:var(--muted)"> = </span><span class="t-val">"Noida, India"</span></div>
+        <div class="t-blank"></div>
+        <div class="t-line"><span class="t-key">core_stack</span><span style="color:var(--muted)"> = [</span></div>
+        <div class="t-line"><span style="color:var(--muted)">&nbsp;&nbsp;</span><span class="t-val">"Python"</span><span style="color:var(--muted)">, </span><span class="t-val">"Playwright"</span><span style="color:var(--muted)">,</span></div>
+        <div class="t-line"><span style="color:var(--muted)">&nbsp;&nbsp;</span><span class="t-val">"Selenium"</span><span style="color:var(--muted)">, </span><span class="t-val">"Automation Anywhere"</span><span style="color:var(--muted)">,</span></div>
+        <div class="t-line"><span style="color:var(--muted)">&nbsp;&nbsp;</span><span class="t-val">"Salesforce API"</span><span style="color:var(--muted)">, </span><span class="t-val">"Flask"</span></div>
+        <div class="t-line"><span style="color:var(--muted)">]</span></div>
+        <div class="t-blank"></div>
+        <div class="t-section">## key_achievements:</div>
+        <div class="t-line"><span class="t-impact">✓ Eliminated 12+ FTE through bots</span></div>
+        <div class="t-line"><span class="t-impact">✓ Real-time Zoho→Salesforce pipelines</span></div>
+        <div class="t-line"><span class="t-impact">✓ TNSTC merchant live dashboard</span></div>
+        <div class="t-line"><span class="t-impact">✓ Invoice automation 100% accuracy</span></div>
+        <div class="t-blank"></div>
+        <div class="t-line"><span class="t-comment"># Available for new challenges</span></div>
+        <div class="t-line"><span class="t-key">status</span><span style="color:var(--muted)"> = </span><span class="t-val">"open_to_work"</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">Transforming Manual<br>Work Into <em style="font-style:italic;color:var(--amber)">Intelligent Systems</em></h2>
+        <p>I'm an <strong>AI Automation Engineer at Pine Labs</strong>, where I design and deploy automation systems that replace repetitive manual processes with reliable, self-running pipelines. Over the past three years, my work has collectively <em>eliminated over 12 FTEs of manual effort</em> across business units saving thousands of hours annually.</p>
+        <p>My toolkit spans the full automation stack: from <strong>Python scripting and Playwright/Selenium bots</strong> to <strong>enterprise CRM integrations</strong> via Salesforce and Zoho APIs, to <strong>Flask-based internal tooling</strong> that empowers operations teams with real-time data visibility. I don't just automate tasks I architect systems that are maintainable, observable, and resilient in production.</p>
+        <p>I'm driven by one core belief: <em>every hour a human spends on a repeatable task is an hour that could be reclaimed for higher-value thinking.</em> My systems make that possible.</p>
+        <div class="pitch-box">
+          <div class="pitch-label">⚡ 30-Second Elevator Pitch</div>
+          <div class="pitch-text">"I'm Harshit, an AI Automation Engineer with 3+ years at Pine Labs. I build Python and RPA systems that eliminate manual workflows and connect enterprise platforms like Salesforce and Zoho my work has replaced 12+ FTEs of manual effort. I'm looking for my next opportunity to scale automation in a data-driven, engineering-first environment."</div>
+        </div>
+      </div>
+      <div class="about-details fade-in">
+        <div class="detail-card">
+          <div class="detail-card-label">📍 Location</div>
+          <div class="detail-card-val">Noida, Uttar Pradesh, India</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-label">📧 Email</div>
+          <div class="detail-card-val"><a href="mailto:harshitkumar7060@gmail.com">harshitkumar7060@gmail.com</a></div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-label">📞 Phone</div>
+          <div class="detail-card-val">+91-7060941451</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-card-label">🏢 Current Employer</div>
+          <div class="detail-card-val">Pine Labs · Automation Engineer (RPA Team) · Jan 2022 – Present</div>
+        </div>
+        <div class="brand-statement">
+          <div class="brand-statement-label">⚙ Personal Brand Statement</div>
+          <p>"The engineer who doesn't just write scripts he architects the systems that make entire teams more productive."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">Technical Arsenal</div>
+      <h2 class="section-title">Skills & Expertise</h2>
+      <p class="section-sub">Production-tested tools and platforms deployed in live enterprise environments.</p>
+    </div>
+    <div class="skills-grid fade-in">
+      <div class="skill-card">
+        <span class="skill-icon">🐍</span>
+        <div class="skill-cat">Programming</div>
+        <ul class="skill-items">
+          <li><span class="skill-tag highlight">Python</span></li>
+          <li><span class="skill-tag highlight">Pandas</span></li>
+          <li><span class="skill-tag highlight">NumPy</span></li>
+          <li><span class="skill-tag highlight">Flask</span></li>
+          <li><span class="skill-tag">Requests</span></li>
+          <li><span class="skill-tag">JavaScript (basic)</span></li>
+          <li><span class="skill-tag">SQL</span></li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🤖</span>
+        <div class="skill-cat">RPA & Automation</div>
+        <ul class="skill-items">
+          <li><span class="skill-tag highlight">Playwright</span></li>
+          <li><span class="skill-tag highlight">Selenium WebDriver</span></li>
+          <li><span class="skill-tag highlight">Automation Anywhere</span></li>
+          <li><span class="skill-tag">Workflow Automation</span></li>
+          <li><span class="skill-tag">Bot Development</span></li>
+          <li><span class="skill-tag">UI Automation</span></li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🔗</span>
+        <div class="skill-cat">APIs & Integration</div>
+        <ul class="skill-items">
+          <li><span class="skill-tag highlight">REST APIs</span></li>
+          <li><span class="skill-tag highlight">Salesforce API</span></li>
+          <li><span class="skill-tag highlight">Webhooks</span></li>
+          <li><span class="skill-tag">Zoho</span></li>
+          <li><span class="skill-tag">Google Sheets API</span></li>
+          <li><span class="skill-tag">SFTP (Paramiko)</span></li>
+          <li><span class="skill-tag">Middleware layers</span></li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">☁️</span>
+        <div class="skill-cat">Cloud & DevOps</div>
+        <ul class="skill-items">
+          <li><span class="skill-tag">Azure (basic)</span></li>
+          <li><span class="skill-tag">Azure DevOps</span></li>
+          <li><span class="skill-tag highlight">Git / GitHub</span></li>
+          <li><span class="skill-tag">CI/CD Pipelines</span></li>
+          <li><span class="skill-tag">Production Monitoring</span></li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">📊</span>
+        <div class="skill-cat">Data & Reporting</div>
+        <ul class="skill-items">
+          <li><span class="skill-tag highlight">Power BI</span></li>
+          <li><span class="skill-tag">Excel Automation</span></li>
+          <li><span class="skill-tag">SQL Querying</span></li>
+          <li><span class="skill-tag">ROI Dashboards</span></li>
+          <li><span class="skill-tag">Data Validation</span></li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <span class="skill-icon">🔐</span>
+        <div class="skill-cat">Security & QA</div>
+        <ul class="skill-items">
+          <li><span class="skill-tag">LDAP Authentication</span></li>
+          <li><span class="skill-tag">MFA / IP Whitelisting</span></li>
+          <li><span class="skill-tag">Logging & Monitoring</span></li>
+          <li><span class="skill-tag">Regression Testing</span></li>
+          <li><span class="skill-tag">Test Case Design</span></li>
+          <li><span class="skill-tag">Exception Handling</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Core Competency Bars -->
+    <div class="fade-in">
+      <div class="section-label" style="margin-top:3rem">Core Competencies</div>
+      <div class="competencies">
+        <div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">Python Automation Engineering</span><span class="comp-pct">95%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:95%"></div></div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">RPA (Playwright / Selenium)</span><span class="comp-pct">92%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:92%"></div></div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">Salesforce / CRM Integration</span><span class="comp-pct">88%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:88%"></div></div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">REST API & Webhook Design</span><span class="comp-pct">90%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:90%"></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">Flask Application Development</span><span class="comp-pct">85%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:85%"></div></div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">Power BI Dashboards</span><span class="comp-pct">82%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:82%"></div></div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">SFTP / Data Pipelines</span><span class="comp-pct">87%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:87%"></div></div>
+          </div>
+          <div class="comp-item">
+            <div class="comp-header"><span class="comp-name">Production Security & QA</span><span class="comp-pct">83%</span></div>
+            <div class="comp-bar"><div class="comp-fill" style="--target-width:83%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
+<section id="experience">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">Career</div>
+      <h2 class="section-title">Work Experience</h2>
+      <p class="section-sub">Building automation infrastructure at scale for one of India's leading fintech platforms.</p>
+    </div>
+
+    <div class="fade-in">
+      <div class="exp-header">
+        <div class="exp-company-group">
+          <div class="exp-company">Pine Labs</div>
+          <div class="exp-role">Automation Engineer · RPA Team</div>
+          <div class="exp-period">Jan 2022 – Present · 3+ Years</div>
+        </div>
+        <div class="exp-meta">
+          <div class="exp-location">📍 Noida, India</div>
+          <div class="exp-badge">Full-Time</div>
+        </div>
+      </div>
+
+      <div class="exp-pillars">
+        <div class="exp-pillar">
+          <div class="pillar-title">🤖 RPA & Workflow Automation</div>
+          <ul class="exp-bullets">
+            <li>Designed and deployed <strong>end-to-end automation workflows</strong> using Python, Playwright, Selenium, and Automation Anywhere, eliminating manual processes across multiple business units</li>
+            <li>Built <strong>merchant onboarding bot</strong> fetching records from DB and populating LMS via Playwright/Selenium; automated KYC uploads and form submissions, <strong>eliminating 3 manual FTEs</strong></li>
+            <li>Developed <strong>Flask-based internal tooling</strong> dashboards, agent portals, authentication systems, and API-driven workflows powering daily operations</li>
+          </ul>
+        </div>
+        <div class="exp-pillar">
+          <div class="pillar-title">🔗 System Integration & APIs</div>
+          <ul class="exp-bullets">
+            <li>Integrated enterprise platforms via <strong>Salesforce APIs, Zoho webhooks, and Google Sheets pipelines</strong> covering CRM, middleware, and booking-engine-style integrations</li>
+            <li>Built <strong>real-time webhook pipeline</strong> converting Zoho form submissions into Salesforce leads with validation, error handling, and logging drastically reduced lead processing time</li>
+            <li>Automated <strong>SFTP file handling</strong> (upload/download/filtering/validation) and built REST API-driven data pipelines for multi-system data synchronisation</li>
+          </ul>
+        </div>
+        <div class="exp-pillar">
+          <div class="pillar-title">📈 Analytics, Security & Reliability</div>
+          <ul class="exp-bullets">
+            <li>Developed <strong>Power BI-connected dashboards</strong> to track operational metrics, automation ROI, and productivity performance — giving leadership real-time operational visibility</li>
+            <li>Implemented <strong>enterprise security</strong>: LDAP authentication, MFA, IP whitelisting, structured logging, exception handling, and production monitoring</li>
+            <li>Designed and executed <strong>test cases, regression tests, and data validation</strong> checks ensuring accuracy and system reliability in production</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="impact-row">
+        <div class="impact-stat">
+          <div class="impact-num">4+</div>
+          <div class="impact-desc">Full-time roles eliminated through automation</div>
+        </div>
+        <div class="impact-stat">
+          <div class="impact-num">~0s</div>
+          <div class="impact-desc">Lead processing time via real-time webhooks</div>
+        </div>
+        <div class="impact-stat">
+          <div class="impact-num">100%</div>
+          <div class="impact-desc">Invoice data accuracy via automated generation</div>
+        </div>
+        <div class="impact-stat">
+          <div class="impact-num">3+</div>
+          <div class="impact-desc">Enterprise platforms integrated end-to-end</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">Featured Work</div>
+      <h2 class="section-title">Case Studies &<br>Key Projects</h2>
+      <p class="section-sub">Every project below solved a real business problem, shipped to production, and delivered measurable impact.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- FEATURED: Merchant Onboarding -->
+      <div class="project-card featured fade-in">
+        <div class="project-body">
+          <div class="project-header" style="background:transparent;border:none;padding:0 0 1rem;margin-bottom:1rem;border-bottom:1px solid var(--border)">
+            <div>
+              <div class="project-number">PROJECT 01</div>
+            </div>
+            <div class="project-type-tag">Featured</div>
+          </div>
+          <div class="project-title">Automated Merchant Onboarding Bot</div>
+          <div class="project-subtitle">Playwright · Selenium · Python · DB Integration</div>
+          <p class="project-problem"><strong>Business Problem:</strong> The merchant onboarding process at Pine Labs required 3 dedicated staff members to manually fetch records, populate the LMS, upload KYC documents, and validate form submissions a bottleneck costing ~1,200 hours per quarter and introducing human error in compliance-critical workflows.</p>
+          <ul class="project-highlights">
+            <li>Engineered end-to-end bot autonomously fetching merchant records from the database and populating the LMS with zero human intervention</li>
+            <li>Built robust KYC document upload and form submission automation with dynamic UI handling across varying merchant profiles</li>
+            <li>Implemented edge-case handling for validation failures, partial submissions, and network timeouts to ensure production reliability</li>
+            <li>Reduced onboarding cycle time from hours to minutes per merchant batch</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Playwright</span>
+            <span class="tech-chip">Selenium</span>
+            <span class="tech-chip">DB Integration</span>
+            <span class="tech-chip">KYC Automation</span>
+            <span class="tech-chip">Exception Handling</span>
+          </div>
+        </div>
+        <div class="project-case-study">
+          <div>
+            <div class="cs-section-title">🎯 My Contribution</div>
+            <div class="cs-text">Sole engineer on design, development, testing, and production deployment. Built from scratch including DB schema analysis, Playwright bot scripting, dynamic selector strategy, and production-grade error recovery.</div>
+          </div>
+          <div>
+            <div class="cs-section-title">⚙ Key Challenge Solved</div>
+            <div class="cs-text">Dynamic UI elements on the LMS platform changed frequently. Implemented a selector resilience strategy using multiple fallback locators, ensuring >99% bot uptime without manual intervention.</div>
+          </div>
+          <div>
+            <div class="cs-section-title">📈 Business Impact</div>
+            <div class="cs-metrics">
+              <div class="cs-metric">
+                <div class="cs-metric-val">3</div>
+                <div class="cs-metric-lbl">FTE roles eliminated</div>
+              </div>
+              <div class="cs-metric">
+                <div class="cs-metric-val">~75%</div>
+                <div class="cs-metric-lbl">Cycle time reduction</div>
+              </div>
+              <div class="cs-metric">
+                <div class="cs-metric-val">99%+</div>
+                <div class="cs-metric-lbl">Bot uptime</div>
+              </div>
+              <div class="cs-metric">
+                <div class="cs-metric-val">0</div>
+                <div class="cs-metric-lbl">Manual errors</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zoho → Salesforce -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-number">PROJECT 02</div>
+          <div class="project-type-tag">CRM Integration</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Zoho → Salesforce Lead Automation Pipeline</div>
+          <div class="project-subtitle">Webhooks · Salesforce API · Python · CRM Middleware</div>
+          <p class="project-problem"><strong>Problem:</strong> Leads captured via Zoho forms were manually transferred to Salesforce — a time-consuming, error-prone process that caused lead decay and lost revenue opportunities.</p>
+          <ul class="project-highlights">
+            <li>Built real-time webhook pipeline that intercepts Zoho form submissions and instantly pushes validated leads to Salesforce</li>
+            <li>Implemented field-level validation, data transformation, and structured error logging before CRM write</li>
+            <li>Near-zero latency from form submission to Salesforce lead creation</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Zoho Webhooks</span>
+            <span class="tech-chip">Salesforce API</span>
+            <span class="tech-chip">Flask</span>
+            <span class="tech-chip">Logging</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TNSTC Dashboard -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-number">PROJECT 03</div>
+          <div class="project-type-tag">Internal Tooling</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">TNSTC Merchant Live Operations Dashboard</div>
+          <div class="project-subtitle">Flask · Salesforce API · Auth · Real-Time Data</div>
+          <p class="project-problem"><strong>Problem:</strong> Operations teams had no real-time visibility into merchant asset status and complaint resolution, relying on manual data pulls that were always stale by the time they were acted on.</p>
+          <ul class="project-highlights">
+            <li>Built Flask-based internal web app pulling live merchant and complaint data from Salesforce APIs</li>
+            <li>Implemented secure LDAP authentication, session management, and role-based access</li>
+            <li>Full data validation layer ensuring dashboard accuracy matches Salesforce source of truth</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-chip">Flask</span>
+            <span class="tech-chip">Salesforce API</span>
+            <span class="tech-chip">LDAP Auth</span>
+            <span class="tech-chip">Session Mgmt</span>
+            <span class="tech-chip">Python</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invoice Automation -->
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <div class="project-number">PROJECT 04</div>
+          <div class="project-type-tag">Finance Automation</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Invoice & Annexure Automation Tool</div>
+          <div class="project-subtitle">Python · UI Automation · Excel · Workflow Design</div>
+          <p class="project-problem"><strong>Problem:</strong> Invoice generation and annexure compilation required ~4 full-time employees, with high error rates from manual data entry into financial documents — creating audit risk and workflow delays.</p>
+          <ul class="project-highlights">
+            <li>Designed a UI-driven automation tool that generates invoices and annexures with a single trigger</li>
+            <li>Reduced processing from days of manual effort to minutes of automated execution</li>
+            <li>Achieved near-100% data accuracy, eliminating manual transcription errors in financial records</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Excel Automation</span>
+            <span class="tech-chip">UI Design</span>
+            <span class="tech-chip">Workflow Automation</span>
+            <span class="tech-chip">Data Validation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIUU Merchant Onboarding — cross-border featured card -->
+      <div class="project-card featured fade-in">
+        <div class="project-body">
+          <div class="project-header" style="background:transparent;border:none;padding:0 0 1rem;margin-bottom:1rem;border-bottom:1px solid var(--border)">
+            <div>
+              <div class="project-number">PROJECT 05</div>
+            </div>
+            <div class="project-type-tag">Cross-Border · Malaysia</div>
+          </div>
+          <div class="project-title">FIUU Payment Gateway — Merchant Onboarding Automation</div>
+          <div class="project-subtitle">Python · Pandas · REST APIs · Excel Automation · JSON · Data Validation</div>
+          <p class="project-problem"><strong>Business Problem:</strong> FIUU, a Malaysian payment gateway, required a scalable, API-driven onboarding pipeline capable of processing merchants across multiple entity types (merchant, officer, store, MCC, banking). The manual workflow was error-prone, compliance-sensitive, and unable to handle bulk merchant intake at speed a cross-border challenge demanding robust data engineering and API integration from India.</p>
+          <ul class="project-highlights">
+            <li>Built end-to-end Python automation for merchant application creation, document processing, and submission via FIUU REST APIs zero manual intervention required post-setup</li>
+            <li>Engineered data ingestion pipelines using Pandas to ingest, transform, and validate merchant, officer, store, MCC, and banking data from Excel source files</li>
+            <li>Implemented Base64 document encoding and automated payload generation for compliant onboarding API requests</li>
+            <li>Designed business rule validation engine with MCC category mapping and structured error-handling to ensure regulatory compliance at each onboarding step</li>
+            <li>Built bulk processing engine for batch merchant application submission, real-time application status retrieval, and automated reporting</li>
+            <li>Integrated multiple FIUU API endpoints into a single orchestrated workflow, drastically reducing per-merchant onboarding time</li>
+          </ul>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Pandas</span>
+            <span class="tech-chip">REST APIs</span>
+            <span class="tech-chip">JSON</span>
+            <span class="tech-chip">Excel Automation</span>
+            <span class="tech-chip">Base64 Encoding</span>
+            <span class="tech-chip">Data Validation</span>
+            <span class="tech-chip">Bulk Processing</span>
+            <span class="tech-chip">Error Handling</span>
+          </div>
+        </div>
+        <div class="project-case-study">
+          <div>
+            <div class="cs-section-title">🌏 Cross-Border Context</div>
+            <div class="cs-text">Delivered remotely from India for a Malaysian payment gateway — demonstrating ability to navigate cross-regional compliance requirements, foreign API documentation, and multi-entity data structures without on-site support.</div>
+          </div>
+          <div>
+            <div class="cs-section-title">🎯 My Contribution</div>
+            <div class="cs-text">Sole engineer. Designed the full pipeline architecture — from Excel ingestion and Pandas transformation through payload construction, API orchestration, and result reporting — and delivered a production-ready system.</div>
+          </div>
+          <div>
+            <div class="cs-section-title">⚙ Key Challenge Solved</div>
+            <div class="cs-text">Multi-entity onboarding (merchant + officer + store + MCC + banking) required a strict sequencing logic with dependency checks between API calls. Built an orchestration layer that manages entity order, handles partial failures gracefully, and resumes without re-submitting already-processed records.</div>
+          </div>
+          <div>
+            <div class="cs-section-title">📈 Business Impact</div>
+            <div class="cs-metrics">
+              <div class="cs-metric">
+                <div class="cs-metric-val">Bulk</div>
+                <div class="cs-metric-lbl">Batch processing — 100s of merchants per run</div>
+              </div>
+              <div class="cs-metric">
+                <div class="cs-metric-val">5+</div>
+                <div class="cs-metric-lbl">Entity types automated per application</div>
+              </div>
+              <div class="cs-metric">
+                <div class="cs-metric-val">100%</div>
+                <div class="cs-metric-lbl">API-driven — zero manual form filling</div>
+              </div>
+              <div class="cs-metric">
+                <div class="cs-metric-val">🌏</div>
+                <div class="cs-metric-lbl">Cross-border delivery India → Malaysia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ EDUCATION ═══════════════════════════════ -->
+<section id="education">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title">Education &<br>Certifications</h2>
+    </div>
+    <div class="edu-certs-grid fade-in">
+      <div>
+        <div class="edu-card">
+          <div class="section-label" style="margin-bottom:1.5rem">Education</div>
+          <div class="edu-degree">Bachelor of Science (B.Sc)</div>
+          <div class="edu-university">Mahatma Jyotiba Phule Rohilkhand University</div>
+          <div class="edu-year">Graduated 2021</div>
+          <hr class="section-divider" style="margin:1.5rem 0">
+          <p style="font-size:0.85rem;color:var(--muted);line-height:1.65">
+            A science foundation complemented by 3+ years of hands-on production engineering experience building real-world automation at enterprise scale where practical systems knowledge and problem-solving ability define expertise.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="cert-card">
+          <div class="section-label" style="margin-bottom:1.5rem">Certifications & Learning</div>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-icon">🏆</span>
+              <div>
+                <div class="cert-name">Automation Anywhere Certified</div>
+                <div class="cert-org">RPA Platform · Enterprise Automation</div>
+              </div>
+            </li>
+            <li>
+              <span class="cert-icon">🐍</span>
+              <div>
+                <div class="cert-name">Python for Automation & Scripting</div>
+                <div class="cert-org">Applied Production Experience · Pine Labs</div>
+              </div>
+            </li>
+            <li>
+              <span class="cert-icon">☁️</span>
+              <div>
+                <div class="cert-name">Azure Fundamentals (AZ-900)</div>
+                <div class="cert-org">Microsoft Azure · In Progress / Planned</div>
+              </div>
+            </li>
+            <li>
+              <span class="cert-icon">🔗</span>
+              <div>
+                <div class="cert-name">Salesforce API Integration</div>
+                <div class="cert-org">Hands-on Enterprise Integration · Pine Labs</div>
+              </div>
+            </li>
+            <li>
+              <span class="cert-icon">📊</span>
+              <div>
+                <div class="cert-name">Power BI Dashboard Development</div>
+                <div class="cert-org">Microsoft · Operational Reporting</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner fade-in">
+      <div class="section-label">Let's Build Something</div>
+      <h2 class="contact-headline">Ready to Automate<br>Your Next Challenge?</h2>
+      <p class="contact-sub">I'm actively exploring new opportunities as an Automation Engineer, Python Developer, RPA Engineer, or AI Automation Engineer. If you're building something that requires intelligent automation — let's talk.</p>
+
+      <div class="contact-links">
+        <a href="mailto:harshitkumar7060@gmail.com" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email Me
+        </a>
+        <a href="tel:+917060941451" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call / WhatsApp
+        </a>
+        <a href="https://linkedin.com/in/harshitkumarsingh" target="_blank" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn Profile
+        </a>
+        <a href="https://github.com/harshitkumar7060" target="_blank" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <div class="download-section">
+        <div class="download-title">📄 Resume / CV</div>
+        <div class="download-sub">Download my latest CV for a complete overview of experience, projects, and technical skills.</div>
+        <a href="#" class="btn-primary" style="display:inline-flex;justify-content:center;width:auto">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume (PDF)
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+  <div class="footer-copy">© 2025 Harshit Kumar Singh · AI Automation Engineer · Noida, India</div>
+  <div class="footer-links">
+    <a href="mailto:harshitkumar7060@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/harshitkumarsingh" target="_blank">LinkedIn</a>
+    <a href="https://github.com/harshitkumar7060" target="_blank">GitHub</a>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════ JAVASCRIPT ═══════════════════════════════ -->
+<script>
+/* ── Circuit canvas background ── */
+(function() {
+  const canvas = document.getElementById('circuit-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [], lines = [];
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+    buildGrid();
+  }
+
+  function buildGrid() {
+    nodes = []; lines = [];
+    const step = 80;
+    for (let x = 0; x < W + step; x += step) {
+      for (let y = 0; y < H + step; y += step) {
+        if (Math.random() > 0.4) {
+          nodes.push({ x: x + (Math.random()-0.5)*20, y: y + (Math.random()-0.5)*20 });
+        }
+      }
+    }
+    for (let i = 0; i < nodes.length; i++) {
+      const n = nodes[i];
+      const near = nodes.filter(m => {
+        const d = Math.hypot(m.x-n.x, m.y-n.y);
+        return d < 120 && d > 0;
+      }).slice(0, 2);
+      near.forEach(m => lines.push([n, m]));
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    ctx.strokeStyle = '#f0a500';
+    ctx.lineWidth = 0.8;
+    lines.forEach(([a, b]) => {
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+    });
+    ctx.fillStyle = '#f0a500';
+    nodes.forEach(n => {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, 1.5, 0, Math.PI*2);
+      ctx.fill();
+    });
+  }
+
+  resize();
+  draw();
+  window.addEventListener('resize', () => { resize(); draw(); });
+})();
+
+/* ── Typewriter ── */
+(function() {
+  const roles = [
+    'AI Automation Engineer',
+    'Python Developer',
+    'RPA Engineer',
+    'Workflow Automation Specialist',
+    'Software Engineer',
+    'Integration Architect'
+  ];
+  let ri = 0, ci = 0, deleting = false;
+  const el = document.getElementById('typewriter-text');
+
+  function tick() {
+    const word = roles[ri];
+    if (!deleting) {
+      el.textContent = word.slice(0, ci + 1);
+      ci++;
+      if (ci === word.length) { deleting = true; setTimeout(tick, 1600); return; }
+    } else {
+      el.textContent = word.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+    }
+    setTimeout(tick, deleting ? 55 : 90);
+  }
+  tick();
+})();
+
+/* ── Scroll fade-in ── */
+(function() {
+  const els = document.querySelectorAll('.fade-in');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(el => obs.observe(el));
+})();
+
+/* ── Competency bar animation ── */
+(function() {
+  const fills = document.querySelectorAll('.comp-fill');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('animated');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  fills.forEach(f => obs.observe(f));
+})();
+
+/* ── Active nav link on scroll ── */
+(function() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+  window.addEventListener('scroll', () => {
+    const sp = window.scrollY + 100;
+    sections.forEach(s => {
+      if (sp >= s.offsetTop && sp < s.offsetTop + s.offsetHeight) {
+        navLinks.forEach(a => {
+          a.style.color = a.getAttribute('href') === '#' + s.id ? 'var(--amber)' : '';
+        });
+      }
+    });
+  });
+})();
+
+/* ── Mobile nav toggle ── */
+function toggleMobileNav() {
+  const nl = document.getElementById('nav-links');
+  const btn = document.getElementById('nav-btn');
+  const open = nl.style.display === 'flex';
+  nl.style.cssText = open ? '' : `
+    display:flex;flex-direction:column;position:absolute;
+    top:62px;left:0;right:0;background:rgba(14,15,17,0.97);
+    padding:1rem 2rem 2rem;gap:1rem;border-bottom:1px solid var(--border);
+    backdrop-filter:blur(18px);
+  `;
+  btn.textContent = open ? '☰' : '✕';
+}
+
+/* ── Counter animation ── */
+(function() {
+  const nums = document.querySelectorAll('.hero-stat-num, .impact-num');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const raw = el.textContent;
+        const num = parseFloat(raw);
+        if (!isNaN(num) && num > 0) {
+          let start = 0, steps = 40;
+          const inc = num / steps;
+          const suffix = raw.replace(/[\d.]/g, '');
+          const hasPlus = raw.includes('+');
+          const timer = setInterval(() => {
+            start += inc;
+            if (start >= num) { start = num; clearInterval(timer); }
+            el.textContent = Number.isInteger(num)
+              ? Math.floor(start) + (hasPlus ? '+' : '') + suffix.replace('+','')
+              : start.toFixed(1) + (hasPlus ? '+' : '') + suffix.replace('+','');
+          }, 30);
+        }
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  nums.forEach(n => obs.observe(n));
+})();
+</script>
+</body>
+</html>
